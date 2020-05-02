@@ -1,0 +1,27 @@
+{
+  "name": "blakeboris.com",
+  "version": "1.0.0",
+  "description": "New website built on Next.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PlGGS/blakeboris.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PlGGS/blakeboris.com/issues"
+  },
+  "homepage": "https://github.com/PlGGS/blakeboris.com#readme",
+  "dependencies": {
+    "next": "^9.3.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
