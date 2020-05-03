@@ -6,7 +6,8 @@ const navbar = () => (
             <li><Link href="/"><a>Home</a></Link></li>
             <li><Link href="/about"><a>About</a></Link></li>
         </ul>
-        <style jsx>{`
+        <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
+        {/* <style jsx>{`
             ul {
                 padding: 10px;
                 background: #333;
@@ -22,7 +23,7 @@ const navbar = () => (
                 color: #fff;
                 text-decoration: none;
             }
-        `}</style>
+        `}</style> */}
     </div>
 );
 
