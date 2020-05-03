@@ -1,29 +1,67 @@
 import Link from 'next/Link';
 
 const navbar = () => (
-    <div>
-        <ul>
-            <li><Link href="/"><a>Home</a></Link></li>
-            <li><Link href="/about"><a>About</a></Link></li>
-        </ul>
+    <div id="bar">
         <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
-        {/* <style jsx>{`
-            ul {
-                padding: 10px;
-                background: #333;
-                color: #fff;
+        <div id="resources">
+            <container id="left-buttons">
+                <ul>
+                    <li><Link href="/"><a>Home</a></Link></li>
+                    <li><Link href="/resume"><a>Resume</a></Link></li>
+                    <li><Link href="/portfolio"><a>Portfolio</a></Link></li>
+                </ul>
+            </container>
+        </div>
+        <container id="name-button">
+            <ul>
+                <li><Link href="/"><a>Blake Boris</a></Link></li>
+            </ul>
+        </container>
+        <div id="resources">
+            <container id="right-buttons">
+                <ul>
+                    <li><Link href="/contact"><a>Contact</a></Link></li>
+                    <li><Link href="https://github.com/PlGGS"><a>GitHub</a></Link></li>
+                    <li><Link href="https://www.linkedin.com/in/blake-boris/"><a>LinkedIn</a></Link></li>
+                </ul>
+            </container>
+        </div>
+        <style jsx>{`
+            #bar {
+                padding: 20px;
+                padding-bottom: 5px;
+                background: #fff;
                 list-style: none;
                 display: flex;
             }
-            ul li {
-                font-size: 20;
-                margin-right: 20px;
+            #resources {
+                padding-top: 6px;
+                margin: 0 auto;
             }
-            ul li a {
-                color: #fff;
+            #left-buttons {
+                float: left;
+                
+            }
+            #name-button ul li a {
+                font-size: 24px;
+            }
+            #right-buttons {
+                align-items: right;
+            }
+            #right-buttons ul {
+                padding-right: 2.5em;
+            }
+            container ul {
+                list-style: none;
+                display: flex;
+            }
+            container ul li a {
+                padding: 10px;
+                font-size: 16px;
+                color: #333;
                 text-decoration: none;
             }
-        `}</style> */}
+        `}</style>
     </div>
 );
 

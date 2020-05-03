@@ -5,11 +5,10 @@ const layout = (props) => (
     <div>
         <Head>
             <title>Blake Boris</title>
+            <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css"/>
         </Head>
         <Navbar/>
-        <div className="container">
-            {props.children}
-        </div>
+        {props.children}
     </div>
 );
 
