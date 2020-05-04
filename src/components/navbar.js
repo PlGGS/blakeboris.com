@@ -1,28 +1,35 @@
 import Link from 'next/Link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
-const Navbar = () => (
+const navbar = () => (
     <div id="bar">
         <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charSet="utf-8" />
         <div id="resources">
-            <container id="left-buttons">
+            <container id="home">
                 <ul>
-                    <li><Link href="/"><a>Home</a></Link></li>
-                    <li><Link href="/resume"><a>Resume</a></Link></li>
-                    <li><Link href="/portfolio"><a>Portfolio</a></Link></li>
+                    <li><Link href="/"><a><b>Blake Boris</b></a></Link></li>
                 </ul>
             </container>
         </div>
-        <container id="name-button">
+        <container id="pages">
             <ul>
-                <li><Link href="/"><a>Blake Boris</a></Link></li>
+                <li><Link href="/"><a>Home</a></Link></li>
+                <li><Link href="/resume"><a>Resume</a></Link></li>
+                <li><Link href="/portfolio"><a>Portfolio</a></Link></li>
+                <li><Link href="/contact"><a>Contact</a></Link></li>
+                <li><Link href="/gallery"><a>Gallery</a></Link></li>
             </ul>
         </container>
         <div id="resources">
-            <container id="right-buttons">
+            <container id="sites">
                 <ul>
-                    <li><Link href="/contact"><a>Contact</a></Link></li>
-                    <li><a href="https://github.com/PlGGS">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/blake-boris/">LinkedIn</a></li>
+                    {/* TODO: fix these icons */}
+                    <li><a href="https://www.github.com/plggs/"><FontAwesomeIcon icon={faGithub} /></a></li>
+                    <li><a/></li>
+                    <li><a href="https://www.linkedin.com/in/blake-boris/"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+                    <li><a/></li>
+                    <li><a href="https://www.instagram.com/blakeboris_/"><FontAwesomeIcon icon={faInstagram} /></a></li>
                 </ul>
             </container>
         </div>
@@ -38,18 +45,13 @@ const Navbar = () => (
                 padding-top: 6px;
                 margin: 0 auto;
             }
-            #left-buttons {
-                float: left;
-                
-            }
-            #name-button ul li a {
+            #pages ul li a {
                 font-size: 24px;
             }
-            #right-buttons {
-                align-items: right;
+            #sites ul li a span {
             }
-            #right-buttons ul {
-                padding-right: 2.5em;
+            #sites ul {
+                padding-right: 3em;
             }
             container ul {
                 list-style: none;
@@ -65,4 +67,4 @@ const Navbar = () => (
     </div>
 );
 
-export default Navbar;
+export default navbar;
