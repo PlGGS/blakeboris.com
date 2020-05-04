@@ -1,8 +1,8 @@
 import Link from 'next/Link';
 
-const navbar = () => (
+const Navbar = () => (
     <div id="bar">
-        <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charSet="utf-8" />
         <div id="resources">
             <container id="left-buttons">
                 <ul>
@@ -21,8 +21,8 @@ const navbar = () => (
             <container id="right-buttons">
                 <ul>
                     <li><Link href="/contact"><a>Contact</a></Link></li>
-                    <li><Link href="https://github.com/PlGGS"><a>GitHub</a></Link></li>
-                    <li><Link href="https://www.linkedin.com/in/blake-boris/"><a>LinkedIn</a></Link></li>
+                    <li><a href="https://github.com/PlGGS">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/blake-boris/">LinkedIn</a></li>
                 </ul>
             </container>
         </div>
@@ -65,4 +65,4 @@ const navbar = () => (
     </div>
 );
 
-export default navbar;
+export default Navbar;
