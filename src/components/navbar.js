@@ -1,4 +1,4 @@
-import Link from 'next/Link';
+import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
@@ -23,14 +23,14 @@ const navbar = () => (
         </container>
         <div id="resources">
             <container id="sites">
-                <ul>
+                <table>
                     {/* TODO: fix these icons */}
-                    <li><a href="https://www.github.com/plggs/"><FontAwesomeIcon icon={faGithub} /></a></li>
-                    <li><a/></li>
-                    <li><a href="https://www.linkedin.com/in/blake-boris/"><FontAwesomeIcon icon={faLinkedin} /></a></li>
-                    <li><a/></li>
-                    <li><a href="https://www.instagram.com/blakeboris_/"><FontAwesomeIcon icon={faInstagram} /></a></li>
-                </ul>
+                    <tr>
+                        <td><a href="https://www.github.com/plggs/"><FontAwesomeIcon icon={faGithub} /></a></td>
+                        <td><a href="https://www.linkedin.com/in/blake-boris/"><FontAwesomeIcon icon={faLinkedin} /></a></td>
+                        <td><a href="https://www.instagram.com/blakeboris_/"><FontAwesomeIcon icon={faInstagram} /></a></td>
+                    </tr>
+                </table>
             </container>
         </div>
         <style jsx>{`
@@ -42,15 +42,26 @@ const navbar = () => (
                 display: flex;
             }
             #resources {
-                padding-top: 6px;
                 margin: 0 auto;
+            }
+            #home ul li a b {
+                font-size: 24px;
             }
             #pages ul li a {
                 font-size: 24px;
             }
-            #sites ul li a span {
+            #sites table tr td {
+                padding-top: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                width 42px;
+                margin: 0 auto;
+                color: #333;
             }
-            #sites ul {
+            #sites table tr td a {
+                color: #333;
+            }
+            #sites table {
                 padding-right: 3em;
             }
             container ul {
@@ -61,7 +72,6 @@ const navbar = () => (
                 padding: 10px;
                 font-size: 16px;
                 color: #333;
-                text-decoration: none;
             }
         `}</style>
     </div>
