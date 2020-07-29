@@ -13,9 +13,6 @@ const Layout = (props) => (
         </div>
         <style jsx>{`
             #front {
-                padding-top: 30px;
-                padding-left: 100px;
-                padding-right: 100px;
                 background: #fafafa;
                 width: 100%;
             }

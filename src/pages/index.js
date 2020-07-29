@@ -1,4 +1,7 @@
 import Layout from '../components/layout';
+import { motion } from "framer-motion"
+
+const moveDuration = 2.5;
 
 const Index = () => (
     <Layout>
@@ -7,11 +10,56 @@ const Index = () => (
                 <tbody>
                     <tr>
                         <td>
-                            <h1>Hello there, I'm <b>Blake Boris</b></h1>
-                            <h5>Hi, I'm a software engineer.</h5>
+                            <motion.div
+                                initial={{
+                                    x: -1500,
+                                    y: 0
+                                }}
+                                animate={{
+                                    x: 0,
+                                    y: 150
+                                }}
+                                transition={{
+                                    duration: moveDuration,
+                                    delay: 0.2
+                                }}
+                            >
+                                <h1>Hello there, I'm <b>Blake Boris</b></h1>
+                            </motion.div>
+                            <motion.div
+                                initial={{
+                                    x: 100,
+                                    y: 1000
+                                }}
+                                animate={{
+                                    x: 0,
+                                    y: 150
+                                }}
+                                transition={{
+                                    duration: moveDuration,
+                                    delay: 0.3
+                                }}
+                            >
+                                <h4>I'm a software engineer.</h4>
+                            </motion.div>
                         </td>
                         <td>
-                            <img src="/blake.png" alt="blake" align="right"></img>
+                            <motion.div
+                                initial={{
+                                    x: 1500,
+                                    y: 0
+                                }}
+                                animate={{
+                                    x: 0,
+                                    y: 150
+                                }}
+                                transition={{
+                                    duration: moveDuration,
+                                    delay: 0.4
+                                }}
+                            >
+                                <img src="/blake.png" alt="blake" align="right"></img>
+                            </motion.div>
                         </td>
                     </tr>
                 </tbody>
@@ -19,12 +67,22 @@ const Index = () => (
         </div>
         <style jsx>{`
             #body {
+                padding-top: 30px;
+                padding-left: 100px;
+                padding-right: 100px;
+                overflow: hidden;
+                padding-bottom: 200px;
             }
-            #body table tbody tr td {
+            #body table {
+                position: relative;
+                margin: 0 auto;
             }
             #body table tbody tr td img {
                 width: 400px;
                 border-radius: 50%;
+            }
+            #body table tbody tr td {
+                padding: 20px;
             }
             .middle {
             
