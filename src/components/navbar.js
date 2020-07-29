@@ -24,12 +24,14 @@ const navbar = () => (
         <div id="resources">
             <container id="sites">
                 <table>
-                    {/* TODO: fix these icons */}
-                    <tr>
-                        <td><a href="https://www.github.com/plggs/"><FontAwesomeIcon icon={faGithub} /></a></td>
-                        <td><a href="https://www.linkedin.com/in/blake-boris/"><FontAwesomeIcon icon={faLinkedin} /></a></td>
-                        <td><a href="https://www.instagram.com/blakeboris_/"><FontAwesomeIcon icon={faInstagram} /></a></td>
-                    </tr>
+                    <tbody>
+                        {/* TODO: fix these icons */}
+                        <tr>
+                            <td><a href="https://www.github.com/plggs/"><FontAwesomeIcon icon={faGithub} /></a></td>
+                            <td><a href="https://www.linkedin.com/in/blake-boris/"><FontAwesomeIcon icon={faLinkedin} /></a></td>
+                            <td><a href="https://www.instagram.com/blakeboris_/"><FontAwesomeIcon icon={faInstagram} /></a></td>
+                        </tr>
+                    </tbody>
                 </table>
             </container>
         </div>
@@ -50,7 +52,7 @@ const navbar = () => (
             #pages ul li a {
                 font-size: 24px;
             }
-            #sites table tr td {
+            #sites table tbody tr td {
                 padding-top: 5px;
                 padding-left: 10px;
                 padding-right: 10px;
@@ -66,6 +68,7 @@ const navbar = () => (
             }
             container ul {
                 list-style: none;
+                padding-left: 0px;
                 display: flex;
             }
             container ul li a {

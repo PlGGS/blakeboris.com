@@ -9,17 +9,15 @@ const Layout = (props) => (
         </Head>
         <Navbar/>
         <div id="front">
-            <div className="container">
-                {props.children}
-            </div>
+            {props.children}
         </div>
         <style jsx>{`
             #front {
                 padding-top: 30px;
                 padding-left: 100px;
+                padding-right: 100px;
                 background: #fafafa;
                 width: 100%;
-                height: 92.1vh;
             }
             .container {
                 // background: red;
