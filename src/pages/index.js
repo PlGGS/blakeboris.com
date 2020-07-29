@@ -28,8 +28,8 @@ const Index = () => (
                             </motion.div>
                             <motion.div
                                 initial={{
-                                    x: 100,
-                                    y: 1000
+                                    x: -1500,
+                                    y: 0
                                 }}
                                 animate={{
                                     x: 0,
@@ -71,7 +71,6 @@ const Index = () => (
                 padding-left: 100px;
                 padding-right: 100px;
                 overflow: hidden;
-                padding-bottom: 200px;
             }
             #body table {
                 position: relative;
@@ -83,12 +82,11 @@ const Index = () => (
             }
             #body table tbody tr td {
                 padding: 20px;
+                padding-bottom: 150px;
             }
             .middle {
-            
             }
             .inner {
-            
             }
         `}</style>
     </Layout>
