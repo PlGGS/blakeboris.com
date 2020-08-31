@@ -35,8 +35,8 @@ const navbar = () => (
                     <Link href="/"><a>Home</a></Link>
                     </motion.button>
                 </li>
-                <li><Link href="/resume"><a>Resume</a></Link></li>
                 <li><Link href="/portfolio"><a>Portfolio</a></Link></li>
+                <li><Link href="/resume"><a>Resume</a></Link></li>
                 <li><Link href="/contact"><a>Contact</a></Link></li>
                 <li><Link href="/gallery"><a>Gallery</a></Link></li>
             </ul>
