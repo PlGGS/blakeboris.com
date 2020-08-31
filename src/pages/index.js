@@ -1,7 +1,7 @@
 import Layout from '../components/layout';
 import { motion } from "framer-motion"
 
-const moveDuration = 2.5;
+const moveDuration = 2;
 
 const Index = () => (
     <Layout>
@@ -67,10 +67,8 @@ const Index = () => (
         </div>
         <style jsx>{`
             #body {
-                padding-top: 30px;
-                padding-left: 100px;
-                padding-right: 100px;
-                overflow: hidden;
+                padding-left: 5%;
+                padding-right: 5%;
             }
             #body table {
                 position: relative;

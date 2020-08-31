@@ -12,10 +12,6 @@ const Layout = (props) => (
             {props.children}
         </div>
         <style jsx>{`
-            #front {
-                background: #fafafa;
-                width: 100%;
-            }
             .container {
                 // background: red;
             }

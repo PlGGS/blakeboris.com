@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { motion } from "framer-motion"
 
 const navbar = () => (
     <div id="bar">
@@ -14,7 +15,26 @@ const navbar = () => (
         </div>
         <container id="pages">
             <ul>
-                <li><Link href="/"><a>Home</a></Link></li>
+                <li>
+                    <motion.button
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        initial={{
+                            opacity: 0,
+                            border: 0
+                        }}
+                        animate={{
+                            opacity: 1,
+                            scale: [1, 0.9, 1, 1.2, 1.1, 1]
+                        }}
+                        transition={{
+                            duration: 0.5,
+                            delay: 0.1
+                        }}
+                    >
+                    <Link href="/"><a>Home</a></Link>
+                    </motion.button>
+                </li>
                 <li><Link href="/resume"><a>Resume</a></Link></li>
                 <li><Link href="/portfolio"><a>Portfolio</a></Link></li>
                 <li><Link href="/contact"><a>Contact</a></Link></li>
