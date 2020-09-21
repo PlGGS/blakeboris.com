@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
     
 </script>
 
-const ProjectPreview = (props) => (
+const Preview = (props) => (
     <div id="project">
         <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charSet="utf-8" />
         <Link name={props.name}>
@@ -98,4 +98,4 @@ function ResizeImages({ name, amt }) {
     return (<div dangerouslySetInnerHTML={{__html: imgs}} />);
 }
 
-export default ProjectPreview;
+export default Preview;
