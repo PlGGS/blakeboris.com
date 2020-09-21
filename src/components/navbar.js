@@ -1,22 +1,21 @@
-import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { motion } from "framer-motion"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { useRouter } from 'next/router';
 
-const navbar = () => (
+const Navbar = () => (
     <div id="bar">
         <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charSet="utf-8" />
         <div id="resources">
             <container id="home">
                 <ul>
-                    <li><Link href="/"><a><b>Blake Boris</b></a></Link></li>
+                    <li><Link href="/"><b>Blake Boris</b></Link></li>
                 </ul>
             </container>
         </div>
         <container id="pages">
             <ul>
                 <li>
-                    <motion.button
+                    {/* <motion.button
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         initial={{
@@ -32,23 +31,23 @@ const navbar = () => (
                             delay: 0.1
                         }}
                     >
-                    <Link href="/"><a>Home</a></Link>
-                    </motion.button>
+                    
+                    </motion.button> */}
+                    <Link href="/" under='true'>Home</Link>
                 </li>
-                <li><Link href="/portfolio"><a>Portfolio</a></Link></li>
-                <li><Link href="/resume"><a>Resume</a></Link></li>
-                <li><Link href="/contact"><a>Contact</a></Link></li>
-                <li><Link href="/gallery"><a>Gallery</a></Link></li>
+                <li><Link href="/portfolio" under='true'>Portfolio</Link></li>
+                <li><Link href="/resume" under='true'>Resume</Link></li>
+                <li><Link href="/contact" under='true'>Contact</Link></li>
+                <li><Link href="/gallery" under='true'>Gallery</Link></li>
             </ul>
         </container>
         <div id="resources">
             <container id="sites">
                 <table>
                     <tbody>
-                        {/* TODO: fix these icons */}
                         <tr>
                             <td><a href="https://www.github.com/plggs/"><FontAwesomeIcon icon={faGithub} /></a></td>
-                            <td><a href="https://www.linkedin.com/in/blake-boris/"><FontAwesomeIcon icon={faLinkedin} /></a></td>
+                            <td><a href="https://www.linkedin.com/in/blakeboris/"><FontAwesomeIcon icon={faLinkedin} /></a></td>
                             <td><a href="https://www.instagram.com/blakeboris_/"><FontAwesomeIcon icon={faInstagram} /></a></td>
                         </tr>
                     </tbody>
@@ -100,4 +99,25 @@ const navbar = () => (
     </div>
 );
 
-export default navbar;
+function Link({ children, href, under }) {
+    const router = useRouter()
+    const style = {
+        marginRight: 10,
+        'text-decoration': under ? router.pathname === href ? 'underline' : 'none' : 'none',
+        'font-size': '24px',
+        color: '#333'
+    }
+
+    const handleClick = (e) => {
+        e.preventDefault()
+        router.push(href)
+    }
+
+    return (
+        <a href={href} onClick={handleClick} style={style}>
+            {children}
+        </a>
+    )
+}
+
+export default Navbar;
