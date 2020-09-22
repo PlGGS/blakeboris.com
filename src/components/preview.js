@@ -14,7 +14,7 @@ const Preview = (props) => (
             <div id="nameAndDesc" style={{ 'list-style-type': 'none' }}>
                 <div id="overlay" style={{ background: props.color }}>
                     <motion.div id="contact"
-                        whileHover={{ scale: 1.02 }}
+                        whileHover={{ scale: 1.04 }}
                         whileTap={{ scale: 0.9 }}
                         initial={{
                             opacity: 0,
