@@ -1,16 +1,30 @@
 import Layout from '../components/layout';
+import { motion } from "framer-motion"
 
 const Contact = () => (
     <Layout>
         <div id="intro">
             <h1>Contact</h1>
-            <p>Here's where you can currently contact me.</p>
+            <p>Where you can currently contact me.</p>
         </div>
-        <div id="contact">
-            <h1>Email me at <a href="mailto:bbor0422@gmail.com">bbor0422@gmail.com</a></h1>
-            <br/>
-            <h1>Call or text me at <a href="tel:6308412502">(630)-841-2502</a></h1>
-        </div>
+        <motion.div id="contact"
+            whileTap={{ scale: 0.9 }}
+            initial={{
+                opacity: 0,
+                border: 0
+            }}
+            animate={{
+                opacity: [0.2, 0.3, 0.4, 0.6, 0.8, 0.9, 1],
+                scale: [0.91, 0.92, 0.93, 0.96, 0.98, 0.99, 1]
+            }}
+            transition={{
+                duration: 0.5,
+                delay: 0.1
+            }}>
+            <h1>Email me at: <motion.div whileHover={{ scale: 1.02 }}><a href="mailto:bbor0422@gmail.com">bbor0422@gmail.com</a></motion.div></h1>
+            <br />
+            <h1>Call or text me at: <motion.div whileHover={{ scale: 1.02 }}><a href="tel:6308412502">(630)-841-2502</a></motion.div></h1>
+        </motion.div>
         <style>{`
             #intro {
                 width: 60%;

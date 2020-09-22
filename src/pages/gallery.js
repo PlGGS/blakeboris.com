@@ -1,11 +1,13 @@
 import Layout from '../components/layout';
+import { useRouter } from 'next/router';
+import { motion } from "framer-motion"
 
 const Gallery = () => (
     <Layout>
         <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
         <div id="intro">
             <h1>Gallery</h1>
-            <p>This is a collection of photos I've taken over the years.</p>
+            <p>A collection of some of my favorite photos I've taken over the years.</p>
         </div>
         <div class="container">
             <Image src="/path.jpg" width="1" height="1" />
@@ -29,11 +31,11 @@ const Gallery = () => (
             <Image src="/kieran.jpg" width="2" height="2" />
             <Image src="/love.jpg" width="1" height="1" />
             <Image src="/climber.jpg" width="3" height="2" />
-            <Image src="/icefall.jpg" width="2" height="1" />
             <Image src="/joy.jpg" width="1" height="2" />
-            <Image src="/puzzle.jpg" width="2" height="1" />
+            <Image src="/icefall.jpg" width="2" height="1" />
+            <Image src="/T.jpg" width="2" height="1" />
+            <Image src="/puzzle.jpg" width="1" height="1" />
             <Image src="/steps.jpg" width="1" height="1" />
-            <Image src="/T.jpg" width="1" height="1" />
             <Image src="/platform.png" width="1" height="2" />
             <Image src="/swing.png" width="2" height="1" />
             <Image src="/bridge.jpg" width="2" height="2" />
@@ -122,15 +124,14 @@ const Gallery = () => (
             }
             
             .image img {
-                width:100%;
-                height:100%;
+                width: 100%;
+                height: 100%;
                 object-fit: cover;
-                object-position:50% 50%;
-                cursor:pointer;
-                transition:.5s ease-in-out;
+                object-position: 50% 50%;
+                cursor: pointer;
+                transition: 0.5s ease-in-out;
             }
-            .gallery-item:hover #image img {
-                opacity: 0#5;
+            .gallery-item:hover {
                 transition: .3s ease-in-out;
                 -webkit-backdrop-filter: blur(5px) saturate(1.8);
                 backdrop-filter: blur(5px) saturate(1.8);
@@ -149,16 +150,38 @@ const Gallery = () => (
 );
 
 function Image({ src, width, height }) {
+    const router = useRouter();
     let cls = `w-${width} h-${height}`;
-    
+
+    const handleClick = (e) => {
+        e.preventDefault()
+        router.push(src)
+    }
+
     return (
-        <div class={cls}>
+        <motion.div class={cls}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.9 }}
+            initial={{
+                opacity: 0,
+                border: 0
+            }}
+            animate={{
+                opacity: [0.2, 0.3, 0.4, 0.6, 0.8, 0.9, 1],
+                scale: [0.91, 0.92, 0.93, 0.96, 0.98, 0.99, 1]
+            }}
+            transition={{
+                duration: 0.5,
+                delay: 0.1
+            }}>
             <div class="gallery-item">
                 <div class="image">
-                    <img src={src} alt={src} />
+                    <a href={src} onClick={handleClick}>
+                        <img src={src} alt={src}></img>
+                    </a>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 

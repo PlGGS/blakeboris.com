@@ -6,7 +6,7 @@ const Portfolio = () => (
         <div id="content">
             <div id="intro">
                 <h1>Projects</h1>
-                <p>Here are a few of my favorite projects I've worked on over the years.</p>
+                <p>A few of my favorite projects I've worked on over the years.</p>
             </div>
             <ul id="grid">
                 <Preview name="r2" color="#2599f7" amt="6">

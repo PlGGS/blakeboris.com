@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 import { useRouter } from 'next/router';
 
 <script>
-    
+
 </script>
 
 const Preview = (props) => (
     <div id="project">
         <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charSet="utf-8" />
         <Link name={props.name}>
-            <div id="nameAndDesc" style={{ 'list-style-type': 'none'}}>
-                <div id="overlay" style={{ background: props.color}}>
+            <div id="nameAndDesc" style={{ 'list-style-type': 'none' }}>
+                <div id="overlay" style={{ background: props.color }}>
                     <ResizeImages name={props.name} amt={props.amt}></ResizeImages>
                 </div>
                 <div id="text">
@@ -77,7 +77,7 @@ const Preview = (props) => (
 );
 
 function Link({ children, name, under }) {
-    const router = useRouter()
+    const router = useRouter();
     const href = '/projects/' + name;
     const style = {
         'text-decoration': 'none',
@@ -103,7 +103,7 @@ function ResizeImages({ name, amt }) {
     }
     imgs += '</table>';
 
-    return (<div dangerouslySetInnerHTML={{__html: imgs}} />);
+    return (<div dangerouslySetInnerHTML={{ __html: imgs }} />);
 }
 
 export default Preview;
