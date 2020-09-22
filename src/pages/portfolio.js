@@ -51,11 +51,11 @@ const Portfolio = () => (
                 width: 40%;
             }
             
-            #project li h1 {
+            #project h1 {
                 padding: 15px;
             }
 
-            #project li p {
+            #project p {
                 padding: 15px;
                 margin: 140px auto 0 0;
             }

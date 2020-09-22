@@ -4,7 +4,12 @@ const Contact = () => (
     <Layout>
         <div id="intro">
             <h1>Contact</h1>
-            <p>This will be where you can contact me!</p>
+            <p>Here's where you can currently contact me.</p>
+        </div>
+        <div id="contact">
+            <h1>Email me at <a href="mailto:bbor0422@gmail.com">bbor0422@gmail.com</a></h1>
+            <br/>
+            <h1>Call or text me at <a href="tel:6308412502">(630)-841-2502</a></h1>
         </div>
         <style>{`
             #intro {
@@ -20,6 +25,13 @@ const Contact = () => (
                 line-height: 22px;
                 letter-spacing: 1px;
                 width: 40%;
+            }
+
+            #contact {
+                width: 60%;
+                margin: 0 auto;
+                padding: 150px;
+                text-align: center;
             }
         `}</style>
     </Layout>

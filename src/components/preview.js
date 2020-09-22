@@ -15,7 +15,9 @@ const Preview = (props) => (
                 <div id="overlay" style={{ background: props.color}}>
                     <ResizeImages name={props.name} amt={props.amt}></ResizeImages>
                 </div>
-                {props.children}
+                <div id="text">
+                    {props.children}
+                </div>
             </div>
         </Link>
         <style jsx>{`
@@ -35,7 +37,6 @@ const Preview = (props) => (
                 height: 100%;
                 top: 0;
                 z-index: 2;
-                opacity: 0.9;
                 -webkit-transition: all 0.2s ease-in;
                     -moz-transition: all 0.2s ease-in;
                     -ms-transition: all 0.2s ease-in;
@@ -54,7 +55,7 @@ const Preview = (props) => (
                 height: 100%;
                 top: 0;
                 z-index: 3;
-                opacity: 0.8;
+                opacity: 0.85;
                 -webkit-transition: all 0.2s ease-in;
                     -moz-transition: all 0.2s ease-in;
                     -ms-transition: all 0.2s ease-in;
@@ -63,6 +64,13 @@ const Preview = (props) => (
             }
             #nameAndDesc:hover{
                 opacity: 1;
+            }
+
+            #text {
+                color: black;
+            }
+            #text:hover{
+                color: white;
             }
         `}</style>
     </div>
