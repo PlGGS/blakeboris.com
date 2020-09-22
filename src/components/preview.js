@@ -13,7 +13,23 @@ const Preview = (props) => (
         <Link name={props.name}>
             <div id="nameAndDesc" style={{ 'list-style-type': 'none' }}>
                 <div id="overlay" style={{ background: props.color }}>
-                    <ResizeImages name={props.name} amt={props.amt}></ResizeImages>
+                    <motion.div id="contact"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.9 }}
+                        initial={{
+                            opacity: 0,
+                            border: 0
+                        }}
+                        animate={{
+                            opacity: [0.2, 0.3, 0.4, 0.6, 0.8, 0.9, 1],
+                            scale: [0.99, 1]
+                        }}
+                        transition={{
+                            duration: 0.5,
+                            delay: 0.1
+                        }}>
+                        <ResizeImages name={props.name} amt={props.amt}></ResizeImages>
+                    </motion.div>
                 </div>
                 <div id="text">
                     {props.children}
