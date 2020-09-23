@@ -8,7 +8,6 @@ const Contact = () => (
             <p>Where you can currently contact me.</p>
         </div>
         <motion.div id="contact"
-            whileTap={{ scale: 0.9 }}
             initial={{
                 opacity: 0,
                 border: 0
@@ -38,7 +37,6 @@ const Contact = () => (
                 font-weight: 400;
                 line-height: 22px;
                 letter-spacing: 1px;
-                width: 40%;
             }
 
             #contact {
@@ -46,6 +44,30 @@ const Contact = () => (
                 margin: 0 auto;
                 padding: 150px;
                 text-align: center;
+            }
+
+            @media (max-device-width : 1080px) {
+                #intro {
+                    margin: 10%;
+                }
+                #intro h1 {
+                    font-size: 24px;
+                }
+                #intro p {
+                    font-size: 12px;
+                }
+
+                #contact {
+                    padding: 0px;
+                    padding-top: 10%;
+                    padding-bottom: 20%;
+                    width: 100%;
+                }
+                #contact h1 {
+                    font-size: 180%;
+                }
+                #contact h1 a {
+                }
             }
         `}</style>
     </Layout>

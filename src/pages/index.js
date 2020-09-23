@@ -9,7 +9,7 @@ const Index = () => (
             <table>
                 <tbody>
                     <tr>
-                        <td>
+                        <td id="intro">
                             <motion.div
                                 initial={{
                                     x: -1500,
@@ -26,7 +26,7 @@ const Index = () => (
                             >
                                 <h1>Hello there, I'm <b>Blake Boris</b></h1>
                             </motion.div>
-                            <motion.div
+                            <motion.div 
                                 initial={{
                                     x: -1500,
                                     y: 0
@@ -69,6 +69,7 @@ const Index = () => (
             #body {
                 padding-left: 5%;
                 padding-right: 5%;
+                overflow: hidden;
             }
             #body table {
                 position: relative;
@@ -82,9 +83,24 @@ const Index = () => (
                 padding: 20px;
                 padding-bottom: 150px;
             }
-            .middle {
+
+            @media (max-device-width : 1080px) {
+                #body table tbody tr td img {
+                    width: 100%;
+                    border-radius: 50%;
+                }
+                #body table {
+                    padding-left: 10%;
+                    padding-right: 10%;
+                }
+                #intro h1 {
+                }
+                #intro h4 {
+                }
             }
-            .inner {
+
+            @media (max-device-width: 1024px) {
+                transform: translate(0%, -2%);
             }
         `}</style>
     </Layout>

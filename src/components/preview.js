@@ -11,11 +11,10 @@ const Preview = (props) => (
     <div id="project">
         <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charSet="utf-8" />
         <Link name={props.name}>
-            <div id="nameAndDesc" style={{ 'list-style-type': 'none' }}>
+            <div id="nameAndDesc" style={{ 'listStyleType': 'none' }}>
                 <div id="overlay" style={{ background: props.color }}>
                     <motion.div id="contact"
                         whileHover={{ scale: 1.04 }}
-                        whileTap={{ scale: 0.9 }}
                         initial={{
                             opacity: 0,
                             border: 0
@@ -88,6 +87,40 @@ const Preview = (props) => (
             #text:hover{
                 color: white;
             }
+
+            @media (max-device-width : 1080px) {
+                #project {
+                    height: 110px;
+                    width: 90%;
+                    margin: auto;
+                }
+
+                #nameAndDesc {
+                    font-size: 10px;
+                }
+                
+                #intro {
+                    margin: 10%;
+                }
+                #intro h1 {
+                    font-size: 24px;
+                }
+                #intro p {
+                    font-size: 12px;
+                }
+                
+                #overlay {
+                    padding: 0px;
+                    margin: 0 0 0 0;
+                    height: 100px;
+                }
+                #project h1 {
+                    font-size: 30px;
+                }
+                #project p {
+                    font-size: 20px;
+                }
+            }
         `}</style>
     </div>
 );
@@ -96,7 +129,7 @@ function Link({ children, name, under }) {
     const router = useRouter();
     const href = '/projects/' + name;
     const style = {
-        'text-decoration': 'none',
+        'textDecoration': 'none',
         color: '#333'
     }
 

@@ -4,12 +4,11 @@ import { motion } from "framer-motion"
 
 const Gallery = () => (
     <Layout>
-        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
         <div id="intro">
             <h1>Gallery</h1>
             <p>A collection of some of my favorite photos I've taken over the years.</p>
         </div>
-        <div class="container">
+        <div className="container">
             <Image src="/path.jpg" width="1" height="1" />
             <Image src="/plant.jpg" width="1" height="1" />
             <Image src="/sunset.jpg" width="1" height="1" />
@@ -60,20 +59,19 @@ const Gallery = () => (
                 font-weight: 400;
                 line-height: 22px;
                 letter-spacing: 1px;
-                width: 40%;
             }
 
             .container{
                 margin: auto auto 100px auto;
                 text-align: center;
-                 display:grid;
+                display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 grid-auto-rows:200px 400px;
                 grid-gap:10px;
                 grid-auto-flow: dense;
             }
 
-            .gallery-item {
+            #gallery-item {
                 width:100%;
                 height:100%;
                 position:relative;
@@ -117,13 +115,13 @@ const Gallery = () => (
                 grid-row: span 6;
             }
             
-            .image {
+            #image {
                 width:100%;
                 height:100%;
                 overflow:hidden;
             }
             
-            .image img {
+            #image img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -131,7 +129,7 @@ const Gallery = () => (
                 cursor: pointer;
                 transition: 0.5s ease-in-out;
             }
-            .gallery-item:hover {
+            #gallery-item:hover {
                 transition: .3s ease-in-out;
                 -webkit-backdrop-filter: blur(5px) saturate(1.8);
                 backdrop-filter: blur(5px) saturate(1.8);
@@ -143,6 +141,28 @@ const Gallery = () => (
                 }
                 .w-1,.w-2,.w-3,.w-4,.w-5,.w-6{
                     grid-column:span 1;
+                }
+            }
+
+            @media (max-device-width : 1080px) {
+                #intro {
+                    margin: 10%;
+                }
+                #intro h1 {
+                    font-size: 24px;
+                }
+                #intro p {
+                    font-size: 12px;
+                }
+
+                #contact {
+                    padding: 0px;
+                }
+                #contact h1 {
+                    font-size: 30px;
+                }
+                #contact p {
+                    font-size: 40px;
                 }
             }
         `}</style>
@@ -159,9 +179,8 @@ function Image({ src, width, height }) {
     }
 
     return (
-        <motion.div class={cls}
+        <motion.div className={cls}
             whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.9 }}
             initial={{
                 opacity: 0,
                 border: 0
@@ -174,8 +193,8 @@ function Image({ src, width, height }) {
                 duration: 0.5,
                 delay: 0.1
             }}>
-            <div class="gallery-item">
-                <div class="image">
+            <div id="gallery-item">
+                <div id="image">
                     <a href={src} onClick={handleClick}>
                         <img src={src} alt={src}></img>
                     </a>

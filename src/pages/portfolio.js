@@ -5,7 +5,7 @@ const Portfolio = () => (
     <Layout>
         <div id="content">
             <div id="intro">
-                <h1>Projects</h1>
+                <h1>Portfolio</h1>
                 <p>A few of my favorite projects I've worked on over the years.</p>
             </div>
             <ul id="grid">
@@ -48,7 +48,6 @@ const Portfolio = () => (
                 font-weight: 400;
                 line-height: 22px;
                 letter-spacing: 1px;
-                width: 40%;
             }
             
             #project h1 {
@@ -58,6 +57,28 @@ const Portfolio = () => (
             #project p {
                 padding: 15px;
                 margin: 140px auto 0 0;
+            }
+
+            @media (max-device-width : 1080px) {
+                #intro {
+                    margin: 10%;
+                }
+                #intro h1 {
+                    font-size: 24px;
+                }
+                #intro p {
+                    font-size: 12px;
+                }
+
+                #project {
+                    padding: 0px;
+                }
+                #project h1 {
+                    font-size: 30px;
+                }
+                #project p {
+                    font-size: 40px;
+                }
             }
         `}</style>
     </Layout>

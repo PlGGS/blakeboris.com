@@ -1,29 +1,40 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { useRouter } from 'next/router';
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
-const Navbar = () => (
+const Navbar = (props) => (
     <div id="bar">
         <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charSet="utf-8" />
         <div id="resources">
-            <container id="home">
+            <div id="home">
                 <ul>
-                    <li><motion.div initial={{ scale: [1.02, 1] }} whileHover={{ scale: 1.05 }}><Link href="/"><b>Blake Boris</b></Link></motion.div></li>
+                    <li><motion.div style={{ 'paddingLeft': '10px' }} initial={{ scale: [1.02, 1] }} whileHover={{ scale: 1.05 }}><Link href="/"><b>Blake Boris</b></Link></motion.div></li>
                 </ul>
-            </container>
+            </div>
         </div>
-        <container id="pages">
+        <div id="pages">
             <ul>
-                <li><motion.div initial={{ scale: [1.02, 1] }} whileHover={{ scale: 1.02 }}><Link href="/" under='true'>Home</Link></motion.div></li>
-                <li><motion.div initial={{ scale: [1.02, 1] }} whileHover={{ scale: 1.02 }}><Link href="/portfolio" under='true'>Portfolio</Link></motion.div></li>
-                <li><motion.div initial={{ scale: [1.02, 1] }} whileHover={{ scale: 1.02 }}><Link href="/resume" under='true'>Resume</Link></motion.div></li>
-                <li><motion.div initial={{ scale: [1.02, 1] }} whileHover={{ scale: 1.02 }}><Link href="/contact" under='true'>Contact</Link></motion.div></li>
-                <li><motion.div initial={{ scale: [1.02, 1] }} whileHover={{ scale: 1.02 }}><Link href="/gallery" under='true'>Gallery</Link></motion.div></li>
+                <li id="page"><motion.div initial={{ scale: [1.02, 1] }} whileHover={{ scale: 1.02 }}><Link href="/" under='true'>Home</Link></motion.div></li>
+                <li id="page"><motion.div initial={{ scale: [1.02, 1] }} whileHover={{ scale: 1.02 }}><Link href="/portfolio" under='true'>Portfolio</Link></motion.div></li>
+                <li id="page"><motion.div initial={{ scale: [1.02, 1] }} whileHover={{ scale: 1.02 }}><Link href="/resume" under='true'>Resume</Link></motion.div></li>
+                <li id="page"><motion.div initial={{ scale: [1.02, 1] }} whileHover={{ scale: 1.02 }}><Link href="/contact" under='true'>Contact</Link></motion.div></li>
+                <li id="page"><motion.div initial={{ scale: [1.02, 1] }} whileHover={{ scale: 1.02 }}><Link href="/gallery" under='true'>Gallery</Link></motion.div></li>
+                <li id="menu">
+                    <Menu href='/menu'>
+                        <motion.div
+                            whileTap={{ rotate: -180 }}
+                            initial={{ rotate: [180, 90, 0], scale: [1.02, 1] }}
+                            whileHover={{ scale: 1.02 }}
+                            style={{ originX: 0.6 }}>
+                            <div id="button"></div>
+                        </motion.div>
+                    </Menu>
+                </li>
             </ul>
-        </container>
+        </div>
         <div id="resources">
-            <container id="sites">
+            <div id="sites">
                 <table>
                     <tbody>
                         <tr>
@@ -33,8 +44,9 @@ const Navbar = () => (
                         </tr>
                     </tbody>
                 </table>
-            </container>
+            </div>
         </div>
+        {props.children}
         <style jsx>{`
             #bar {
                 padding: 20px;
@@ -43,8 +55,13 @@ const Navbar = () => (
                 list-style: none;
                 display: flex;
             }
-            #resources {
+            #pages {
                 margin: 0 auto;
+            }
+            #button {
+                display:none;
+            }
+            #resources {
             }
             #sites table tbody tr td {
                 padding-top: 5px;
@@ -57,18 +74,13 @@ const Navbar = () => (
             #sites table tr td a {
                 color: #333;
             }
-            #sites table {
-                padding-right: 3em;
+            #menu {
+                display: none;
             }
-            container ul {
+            div ul {
                 list-style: none;
                 padding-left: 0px;
                 display: flex;
-            }
-            container ul li a {
-                padding: 10px;
-                font-size: 16px;
-                color: #333;
             }
             #icon:hover {
                 color: #18bc9c;
@@ -78,16 +90,46 @@ const Navbar = () => (
                     -o-transition: all 0.2s ease-in;
                     transition: all 0.2s ease-in;
             }
+
+            /* Smartphones (portrait and landscape) ----------- */
+            @media (max-device-width : 1024px) {
+                #page {
+                    display: none;
+                }
+                #menu {
+                    display: inherit;
+                    transform: translate(-15%, 35%)
+                }
+                #button {
+                    display: inherit;
+                    position: relative;
+                    top: -5px;
+                    content: "";
+                    display: inline-block;
+                    width: 15px;
+                    height: 15px;
+                    border-right: 0.2em solid black;
+                    border-top: 0.2em solid black;
+                    transform: rotate(135deg) scale(1.4, 1.4);
+                    margin-right: 0.5em;
+                    margin-left: 1.0em;
+                    -webkit-transition: all 0.2s ease-in;
+                        -moz-transition: all 0.2s ease-in;
+                        -ms-transition: all 0.2s ease-in;
+                        -o-transition: all 0.2s ease-in;
+                        transition: all 0.2s ease-in;
+                }
+            }
         `}</style>
     </div>
 );
 
 function Link({ children, href, under }) {
-    const router = useRouter()
+    const router = useRouter();
     const style = {
         marginRight: 10,
-        'text-decoration': under ? router.pathname === href ? 'underline' : 'none' : 'none',
-        'font-size': '24px',
+        'textDecoration': under ? router.pathname === href ? 'underline' : 'none' : 'none',
+        'fontSize': '24px',
         color: '#333'
     }
 
@@ -101,6 +143,21 @@ function Link({ children, href, under }) {
             {children}
         </a>
     )
+}
+
+function Menu({ children, href }) {
+    const router = useRouter();
+
+    const handleClick = (e) => {
+        e.preventDefault()
+        router.push(href)
+    }
+
+    return (
+        <a href={href} onClick={handleClick}>
+            {children}
+        </a>
+    );
 }
 
 export default Navbar;
