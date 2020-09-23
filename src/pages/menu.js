@@ -81,8 +81,6 @@ function Link({ children, href, under }) {
         router.push(href)
     }
 
-    history[history.length - 1]
-
     return (
         <a href={href} onClick={choose} style={style}>
             {children}
