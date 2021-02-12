@@ -7,8 +7,8 @@ const Docs = () => (
         url="https://github.com/PlGGS/docs"
         desc="Documentation for the V9 Platform using ESDoc, a JavaScript Documentation generator."
         pic0='/docs/docs3.jpg'
-        pic1='/docs/docs2.jpg'
-        pic2='/docs/docs0.jpg'
+        pic1='/docs/docs0.jpg'
+        pic2='/docs/docs2.jpg'
         writeup={(
             <div>
                 <h2>The little robot that couldnt</h2>
