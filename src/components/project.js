@@ -61,7 +61,7 @@ const Project = (props) => (
                 padding: 8px 16px;
                 text-decoration: none;
                 font-size: 16px;
-                margin: 10px 4px;
+                margin: 5px 4px;
                 transition-duration: 0.4s;
                 cursor: pointer;
                 border-radius: 7px;

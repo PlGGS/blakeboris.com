@@ -1,42 +1,38 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { motion } from "framer-motion";
 import { useRouter } from 'next/router';
-
-<script>
-
-</script>
 
 const Preview = (props) => (
     <div id="project">
         <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charSet="utf-8" />
         <Link name={props.name}>
-            <div id="nameAndDesc" style={{ 'listStyleType': 'none' }}>
-                <div id="overlay" style={{ background: props.color }}>
-                    <motion.div id="contact"
-                        whileHover={{ scale: 1.04 }}
-                        initial={{
-                            opacity: 0,
-                            border: 0
-                        }}
-                        animate={{
-                            opacity: [0.2, 0.3, 0.4, 0.6, 0.8, 0.9, 1],
-                            scale: [0.99, 1]
-                        }}
-                        transition={{
-                            duration: 0.5,
-                            delay: 0.1
-                        }}>
+            <motion.div
+                whileHover={{ scale: 1.04 }}
+                initial={{
+                    opacity: 0,
+                    border: 0
+                }}
+                animate={{
+                    opacity: [0.2, 0.3, 0.4, 0.6, 0.8, 0.9, 1],
+                    scale: [0.99, 1]
+                }}
+                transition={{
+                    duration: 0.5,
+                    delay: 0.1
+                }}>
+
+                <div id="overlay" >
+                    <div style={{ background: props.color }}>
                         <ResizeImages name={props.name} amt={props.amt}></ResizeImages>
-                    </motion.div>
+                    </div>
                 </div>
-                <div id="text">
-                    {props.children}
-                </div>
+            </motion.div>
+            <div id="nameAndDesc" style={{ 'listStyleType': 'none' }}>
+                {props.children}
             </div>
         </Link>
         <style jsx>{`
             #project {
+                overflow: hidden;
                 margin: 1% 20% 1% 20%;
                 width: 57%;
                 height: 275px;
@@ -45,11 +41,11 @@ const Preview = (props) => (
                 opacity: 1;
             }
             #overlay {
-                overflow: hidden;
-                list-style-type: none;
                 position: absolute;
                 width: 100%;
                 height: 100%;
+                color: white;
+                opacity: 0.6;
                 top: 0;
                 z-index: 2;
                 -webkit-transition: all 0.2s ease-in;
@@ -59,33 +55,16 @@ const Preview = (props) => (
                     transition: all 0.2s ease-in; 
             }
             #overlay:hover{
-                opacity: 0.2;
+                opacity: 0.1;
             }
 
             #nameAndDesc {
-                overflow: hidden;
+                z-index: 1;
                 list-style-type: none;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                z-index: 3;
-                opacity: 0.85;
-                -webkit-transition: all 0.2s ease-in;
-                    -moz-transition: all 0.2s ease-in;
-                    -ms-transition: all 0.2s ease-in;
-                    -o-transition: all 0.2s ease-in;
-                    transition: all 0.2s ease-in; 
+                opacity: 1;
+                background-color: transparent;
             }
             #nameAndDesc:hover{
-                opacity: 1;
-            }
-
-            #text {
-                color: black;
-            }
-            #text:hover{
-                color: white;
             }
 
             @media (max-device-width : 1080px) {
@@ -146,9 +125,9 @@ function Link({ children, name, under }) {
 }
 
 function ResizeImages({ name, amt }) {
-    var imgs = '<table style="">';
+    var imgs = `<table>`;
     for (var o = 0; o < amt; o++) {
-        imgs += `<td><img src='/${name}/${name}${o}.jpg' style="height: 275px"/></td>`
+        imgs += `<td><img src='/${name}/${name}${o}.jpg' style="height: 275px;"/></td>`
     }
     imgs += '</table>';
 

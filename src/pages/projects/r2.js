@@ -11,9 +11,9 @@ const R2 = () => (
         writeup={(
             <div>
                 <h2>The little robot that couldn't</h2>
-                <p>
-                    Back in 
-                </p>
+                {/* <p>
+                    Before the summer of 2019, 
+                </p> */}
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac tempor mauris, at rhoncus enim. Vestibulum quam ex, 
                     placerat non consequat non, faucibus ut neque. Duis pretium mauris elit, quis congue risus rhoncus vitae. Maecenas 
