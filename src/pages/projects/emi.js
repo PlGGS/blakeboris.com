@@ -6,7 +6,7 @@ const EMI = () => (
         name="Eldewrito Multi Instance"
         url="https://github.com/PlGGS/ElDewrito-Multi-Instance"
         desc="A modular launcher for ElDewrito 0.6+ that allows for a split screen like experience."
-        pic0='https://camo.githubusercontent.com/1dd248d0d4684a6bc9fb5ee0046874702bb89969/68747470733a2f2f62626c616b652e696e666f2f6173736574732f456c4465777269746f4d756c7469496e7374616e63652e706e67'
+        pic0='/emi/emi4.jpg'
         pic1='/emi/emi3.jpg'
         pic2='/emi/emi2.jpg'
         writeup={(
