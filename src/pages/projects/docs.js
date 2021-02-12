@@ -4,6 +4,7 @@ import Project from '../../components/project';
 const Docs = () => (
     <Project
         name="V9 Documentation"
+        url="https://github.com/PlGGS/docs"
         desc="Documentation for the V9 Platform using ESDoc, a JavaScript Documentation generator."
         pic0='/docs/docs3.jpg'
         pic1='/docs/docs2.jpg'
