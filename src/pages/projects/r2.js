@@ -10,24 +10,49 @@ const R2 = () => (
         pic2='https://user-images.githubusercontent.com/20197872/62155936-a48a1d00-b2cf-11e9-8fee-57c5c4db1d10.gif'
         writeup={(
             <div>
-                <h2>The little robot that couldn't</h2>
-                {/* <p>
-                    Before the summer of 2019, 
-                </p> */}
+                <h2>The Little Robot that Could</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac tempor mauris, at rhoncus enim. Vestibulum quam ex, 
-                    placerat non consequat non, faucibus ut neque. Duis pretium mauris elit, quis congue risus rhoncus vitae. Maecenas 
-                    gravida sagittis enim id dapibus. Fusce a dui dui. Duis cursus dignissim ipsum nec aliquam. Fusce pellentesque, erat 
-                    non ornare accumsan, libero nunc aliquet dolor, in euismod nisi arcu ut velit. Duis felis nisi, dictum vitae massa 
-                    fringilla, imperdiet sollicitudin enim. Sed nec orci mauris. Class aptent taciti sociosqu ad litora torquent per 
-                    conubia nostra, per inceptos himenaeos. Suspendisse vitae dolor purus. Curabitur auctor sapien quis ex consectetur, 
-                    a iaculis justo sodales.
+                    For years before the summer of 2019, my old Hasbro R2D2 toy sat in shambles as I started planning 
+                    a new life for it. I sat on the idea for a long time with my little experience in electronic hardware. 
+                    As a kid, I had always imagined the droid as a better product, because the limited control comprised only 
+                    of voice commands didn't exactly work well. I knew I'd like to keep those around, and eventually, I came up with 
+                    a plan to write my own custom ones using AWS Alexa APIs.
                 </p>
-                <p>Etiam vel risus ac elit aliquet feugiat. Vivamus elementum turpis vel mi varius, quis condimentum mauris faucibus. Curabitur sodales tellus eget faucibus aliquet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec viverra volutpat purus non iaculis. Suspendisse eget velit elit. Morbi blandit diam at lacus condimentum, eu egestas ligula ullamcorper.</p>
-                <h2>The little robot that could</h2>
-                <p>Aenean venenatis, ante sodales tristique ullamcorper, ex mi tempus orci, accumsan rutrum lacus felis nec odio. Vestibulum lobortis ex turpis, eu porta risus tincidunt eget. Praesent in turpis eleifend justo pretium accumsan a placerat felis. Integer id eleifend nibh, sed porttitor nisl. Cras et nisl volutpat, bibendum mi vel, imperdiet mauris. Sed placerat augue sed purus lobortis, id volutpat est convallis. Etiam dictum sem et viverra tincidunt. Morbi pretium hendrerit leo eu porttitor. Nulla eros eros, pulvinar id venenatis sed, viverra suscipit lectus. Phasellus fermentum ex a tortor cursus dictum. Mauris id nisl mi. Quisque et est vulputate leo lacinia vestibulum sed a quam. Sed pulvinar est vitae nulla suscipit porttitor. Nam dignissim nunc sed ultricies rhoncus. Etiam placerat tellus mi, et porta magna finibus vitae. Aenean mollis sapien sit amet urna hendrerit, ac convallis mauris commodo.</p>
-                <p>In ut finibus turpis. Nunc et urna dictum, tincidunt felis ac, suscipit ex. Proin in libero in elit cursus tristique ut et turpis. Nulla sit amet vestibulum lectus. In ut arcu auctor, tempor enim ac, ornare ex. Nam volutpat congue sapien eget suscipit. Duis vehicula sollicitudin vestibulum. Nullam dolor ante, consectetur at porta ac, facilisis non ipsum. Nunc mollis metus at diam finibus, eget porta dui placerat. Aliquam lobortis risus vel egestas finibus. Sed elementum at risus nec elementum. Nulla eu lacus vitae enim gravida bibendum eget ac metus. Donec luctus quis quam nec euismod.</p>
-                <p>Donec bibendum mi ante, a blandit quam mattis in. Nam elementum, dui eget pellentesque varius, mauris metus pulvinar metus, eget dictum diam nulla vel urna. Mauris a rutrum ante. Nam mattis ut libero eget sollicitudin. Fusce a egestas metus. Fusce egestas accumsan orci id pulvinar. Donec mattis malesuada sem ac vestibulum. Mauris non purus justo. Donec ut venenatis lorem.</p>
+                <p>
+                    Before starting on the hardware, I dove into AWS and created my own custom Alexa app which could be activated 
+                    on any Alexa-capable device by saying "Alexa, run R2D2B2." It was mindblowing for me as a highschool student to 
+                    <i> publish</i> my own publically available voice commands in this way. With my mind bursting with possibilities, 
+                    I began thinking more seriously about how I was going to re-engineer the internals of the droid itself. 
+                </p>
+                <p>
+                    I began by reading up on voltages and relays before deciding to make use of a Raspberry Pi for the project rather than 
+                    an Arduino. I was under the impression that it would be worthwhile to use C# rather than Python thanks to Microsoft somehow 
+                    capturing my interest with their .Net IoT initiative. This led me down rabbit holes for weeks as I struggled with long load 
+                    times and frequent slowdowns for what would've otherwise been a relatively easy task for a Rasperry Pi running Raspian (now Raspberry Pi OS). 
+                    To be fair, ARM was somehow still rough territory for Microsoft, and that has barely changed as of 2021. Additionally, my 
+                    experience with Linux was incredibly sparce at the time, so learning Linux alongside Python on a Raspberry Pi didn't sound 
+                    nearly as appealing as sticking with Microsoft for the time being.
+                </p>
+                <p>
+                    After finishing high school, I spent the summer with my soon to be roommate working out the actual process of wiring the motors 
+                    inside to corresponding pins on the Raspberry Pi. With the bulky relays we were using, we had little room to spare inside the droid 
+                    all things considered. Beyond the Pi and the relays, I wanted to fit a loud speaker, a separate Alexa device, and an extra battery 
+                    to make sure the motors in the wheels had all the power they needed for R2 to get around. We started wiring up everything outside R2 
+                    to make sure the relays were finally working properly before designing the systems for activating them through code. I no longer wanted 
+                    the primary source of input to be voice commands, so after we had squeezed the Pi and relays inside, I started designing exactly how a 
+                    wireless gamepad would work to send the inputs.
+                </p>
+                <p>
+                    I devised a plan for the two sticks on an Xbox controller to individually control each of R2's legs, and to my surprise, the controls were intuitive 
+                    even for friends and family of mine who didn't regularly play videogames. It worked so well, that the only other buttons necessary for full movement 
+                    were the bumpers for turning R2's head around. This left the rest of the buttons on the controller fully available for audio playback which made for 
+                    fun interactions with others down the line even when they weren't using the voice commands.
+                </p>
+                <p>
+                    With all the soldering and wiring for movement done, we were left with the task of fitting the additional aforementioned features into the droid. 
+                    This turned out to be surprisingly easy since I didn't want to wire up those features to the main batteries anyway. With everything finally packed inside 
+                    R2, I worked on polishing the software for both the movement and voice commands before finally sharing the little droid with the world.
+                </p>
             </div>)}
     />
 );
