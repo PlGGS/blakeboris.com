@@ -26,7 +26,7 @@
     "@fortawesome/react-fontawesome": "^0.1.9",
     "font-awesome": "^4.7.0",
     "framer-motion": "^2.3.0",
-    "next": "^11.0.1",
+    "next": "^12.1.0",
     "next-fonts": "^1.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
