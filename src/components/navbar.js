@@ -67,7 +67,7 @@ const Navbar = (props) => (
                 padding-top: 5px;
                 padding-left: 10px;
                 padding-right: 10px;
-                width 42px;
+                width: 42px;
                 margin: 0 auto;
                 color: #333;
             }
