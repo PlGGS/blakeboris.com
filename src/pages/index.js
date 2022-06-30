@@ -135,16 +135,19 @@ const Index = () => (
                     padding: 0px;
                     order: 2;
                     transform: translate(0px, calc(-40vh));
+
                     text-align: center;
+                }
+                #intro h4 {
+                    padding-top: 10px;
+                    font-size: 18pt;
                 }
             }
 
-            @media screen and (max-height: 800px) {
+            @media screen and (max-height: 750px) {
                 #pic img {
+                    transform: translate(0px, -20px);
                     width: 220px;
-                }
-                #intro h1 {
-                    font-size: 30pt;
                 }
             }
         `}</style>
