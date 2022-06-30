@@ -1,11 +1,4 @@
 import Layout from "../components/layout";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faGithub,
-    faLinkedin,
-    faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
-import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
 const picHeight = "202px";
@@ -89,8 +82,9 @@ const Project = (props) => (
                 margin: auto auto 100px auto;
             }
             .container div h2 {
+                text-decoration: underline;
                 padding-top: 10px;
-                padding-bottom: 5px;
+                padding-bottom: 15px;
             }
             
             @media screen and (max-width:500px){
@@ -116,17 +110,25 @@ const Project = (props) => (
 
                 .button {
                     padding: 1px 4px;
-                    transform: translate(0px, -11px);
+                    transform: translate(0px, -6px);
                 }
                 
                 #pic0 {
                     display: none;
                 }
                 #pic1 {
+                    width: 100%;
                     transform: translate(-2%, 0px);
                 }
                 #pic2 {
                     display: none;
+                }
+
+                .container {
+                    width: 81.5%;
+                }
+                .container div h2 {
+                    font-size: 22pt;
                 }
             }
         `}</style>
