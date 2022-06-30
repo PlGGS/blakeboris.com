@@ -1,10 +1,14 @@
-import Layout from '../components/layout';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import Layout from "../components/layout";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faGithub,
+    faLinkedin,
+    faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
-const picHeight = '202px';
+const picHeight = "202px";
 
 const Project = (props) => (
     <Layout>
@@ -12,23 +16,23 @@ const Project = (props) => (
             <div id="intro">
                 <div id="header">
                     <div id="item">
-                        <a className="button" href={props.url}>View project on GitHub</a>
+                        <a className="button" href={props.url}>
+                            View project on GitHub
+                        </a>
                     </div>
                     <div id="item">
                         <h1>{props.name}</h1>
                         <p>{props.desc}</p>
                     </div>
                 </div>
-                
+
                 <div id="pics">
                     <img id="pic0" src={props.pic0} height={picHeight} />
                     <img id="pic1" src={props.pic1} height={picHeight} />
                     <img id="pic2" src={props.pic2} height={picHeight} />
                 </div>
             </div>
-            <div className="container">
-                {props.writeup}
-            </div>
+            <div className="container">{props.writeup}</div>
             <style>{`
             #intro {
                 width: 60%;
@@ -65,6 +69,7 @@ const Project = (props) => (
                 transition-duration: 0.4s;
                 cursor: pointer;
                 border-radius: 7px;
+                transform: translate(0px, 1px);
             }
             .button:hover {
                 color: white;
@@ -77,10 +82,12 @@ const Project = (props) => (
                 text-align: center;
             }
 
+            .container {
+                width: 60%;
+            }
             .container div {
                 margin: auto auto 100px auto;
             }
-            
             .container div h2 {
                 padding-top: 10px;
                 padding-bottom: 5px;
@@ -129,32 +136,32 @@ const Project = (props) => (
 
 function Link({ children, name, under }) {
     const router = useRouter();
-    const href = '/projects/' + name;
+    const href = "/projects/" + name;
     const style = {
-        'text-decoration': 'none',
-        color: '#333'
-    }
+        "text-decoration": "none",
+        color: "#333",
+    };
 
     const handleClick = (e) => {
-        e.preventDefault()
-        router.push(href)
-    }
+        e.preventDefault();
+        router.push(href);
+    };
 
     return (
         <a href={href} onClick={handleClick} style={style}>
             {children}
         </a>
-    )
+    );
 }
 
 function ResizeImages({ name, amt }) {
     var imgs = '<table style="">';
     for (var o = 0; o < amt; o++) {
-        imgs += `<td><img src='/${name}/${name}${o}.jpg' style="height: 275px"/></td>`
+        imgs += `<td><img src='/${name}/${name}${o}.jpg' style="height: 275px"/></td>`;
     }
-    imgs += '</table>';
+    imgs += "</table>";
 
-    return (<div dangerouslySetInnerHTML={{ __html: imgs }} />);
+    return <div dangerouslySetInnerHTML={{ __html: imgs }} />;
 }
 
 export default Project;

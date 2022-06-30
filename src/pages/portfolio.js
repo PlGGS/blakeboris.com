@@ -1,38 +1,52 @@
-import Layout from '../components/layout';
-import Preview from '../components/preview';
+import Layout from "../components/layout";
+import Preview from "../components/preview";
 
 const Portfolio = () => (
     <Layout>
         <div id="content">
             <div id="intro">
                 <h1>Portfolio</h1>
-                <p>A few of my favorite projects I've worked on over the years.</p>
+                <p>
+                    A few of my favorite projects I've worked on over the years.
+                </p>
             </div>
             <ul id="grid">
-                <Preview name="r2" color="#2599f7" amt="6">
-                    <li>
-                        <div id="project">
-                            <h1>R2D2B2</h1>
-                            <p>An Amazon Echo integrated application for adding features to Hasbro R2D2 via Raspberry Pi.</p>
+                <li class="item">
+                    <Preview name="r2" color="#2599f7" amt="6">
+                        <div id="item">
+                            <div id="project">
+                                <h1>R2D2B2</h1>
+                                <p>
+                                    An Amazon Echo integrated application for
+                                    adding features to Hasbro R2D2 via Raspberry
+                                    Pi.
+                                </p>
+                            </div>
                         </div>
-                    </li>
-                </Preview>
-                <Preview name="emi" color="#4f27e3" amt="4">
-                    <li>
+                    </Preview>
+                </li>
+                <li class="item">
+                    <Preview id="preview" name="emi" color="#4f27e3" amt="4">
                         <div id="project">
                             <h1>Eldewrito Multi Instance</h1>
-                            <p>A modular launcher for ElDewrito 0.6+ that allows for a split screen like experience.</p>
+                            <p>
+                                A modular launcher for ElDewrito 0.6+ that
+                                allows for a split screen like experience.
+                            </p>
                         </div>
-                    </li>
-                </Preview>
-                <Preview name="docs" color="#1d29a3" amt="4">
-                    <li>
+                    </Preview>
+                </li>
+                <li class="item">
+                    <Preview id="preview" name="docs" color="#1d29a3" amt="4">
                         <div id="project">
                             <h1>V9 Documentation</h1>
-                            <p>Documentation for the V9 Platform using ESDoc, a JavaScript Documentation generator.</p>
+                            <p>
+                                Documentation for the V9 Platform using ESDoc, a
+                                JavaScript Documentation generator.
+                            </p>
                         </div>
-                    </li>
-                </Preview>
+                    </Preview>
+                </li>
             </ul>
         </div>
         <style>{`
@@ -50,8 +64,16 @@ const Portfolio = () => (
                 letter-spacing: 1px;
             }
             
+            #grid .item {
+                list-style: none;
+                padding-bottom: 120px;
+            }
+            #project:hover {
+                color: white;
+            }
             #project h1 {
                 padding: 15px;
+                opacity: 1;
             }
 
             #project p {
@@ -70,9 +92,7 @@ const Portfolio = () => (
                     font-size: 12px;
                 }
 
-                #project {
-                    padding: 0px;
-                }
+                
                 #project h1 {
                     font-size: 30px;
                 }
