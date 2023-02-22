@@ -58,7 +58,7 @@ const Index = () => (
                             delay: 0.4,
                         }}
                     >
-                        <img src="/blake.png" alt="blake" align="right"></img>
+                        <img src="/blapCircle.webp" alt="blake" align="right"></img>
                     </motion.div>
                 </div>
             </div>
