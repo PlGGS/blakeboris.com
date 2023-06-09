@@ -1,23 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Document, Page, pdfjs } from 'react-pdf';
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 import Layout from '../components/layout';
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
-const Doc = (props) => {
-    const [width, setWidth] = React.useState(0);
-    const [height, setHeight] = React.useState(0);
-    React.useEffect(() => {
-        setWidth(window.innerWidth);
-        setHeight(window.innerHeight);
-    });
-        return <object id="doc" src={props.src} style={{ width: width, height: height - 84 }} type="text/html" data="https://docs.google.com/document/d/1RGYdukC4DySBY6IXJ9DQhSgoy-eJKM6jILPzs9R2eu0/edit?usp=sharing"></object>
-};
+function PdfViewer() {
+    const [numPages, setNumPages] = useState(null);
+    const [pageNumber, setPageNumber] = useState(1);
+
+    function onDocumentLoadSuccess({ numPages }) {
+        setNumPages(numPages);
+    }
+
+    return (
+        <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+        }}>
+        <Document file="Resume.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+            <div style={{
+            boxShadow: '0px 2px 6px rgba(0, 0, 0, 0.3)',
+            transform: 'scale(1.1)',
+            marginTop: '2.5em'
+        }}>
+            <Page pageNumber={pageNumber} renderTextLayer={false} />
+        </div>
+        </Document>
+        </div>
+    );
+}
 
 const Resume = () => (
     <Layout>
-        <Doc/>
-        <style jsx>{`
-            #doc {
-            }
-        `}</style>
+        <PdfViewer/>
     </Layout>
 );
 
