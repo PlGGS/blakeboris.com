@@ -4,7 +4,7 @@ import Project from '../../components/project';
 const PAD = () => (
     <Project
         name="Photo A Day"
-        url="https://github.com/PlGGS/scheduling-productivity-booster"
+        url="https://github.com/PlGGS/photo-a-day"
         desc="A multi-platform mobile application made with Flutter for logging a picture of yourself once per day."
         pic0='/pad/pad0.jpg'
         pic1='/pad/pad1.jpg'

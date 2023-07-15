@@ -5,7 +5,7 @@ const EMI = () => (
     <Project
         name="Eldewrito Multi Instance"
         url="https://github.com/PlGGS/ElDewrito-Multi-Instance"
-        desc="Next.js web application for syncronizing meetings across multiple teams at an organization."
+        desc="A modular launcher for ElDewrito 0.6+ that allows for a split screen like experience."
         pic0='/emi/emi4.jpg'
         pic1='/emi/emi3.jpg'
         pic2='/emi/emi2.jpg'
