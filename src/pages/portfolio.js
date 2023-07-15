@@ -7,7 +7,7 @@ const Portfolio = () => (
             <div id="intro">
                 <h1>Portfolio</h1>
                 <p>
-                    A few of my favorite projects I've worked on over the years.
+                    A few of my favorite personal and group projects I've worked on over the years.
                 </p>
             </div>
             <ul id="grid">
@@ -22,6 +22,56 @@ const Portfolio = () => (
                                     Pi.
                                 </p>
                             </div>
+                        </div>
+                    </Preview>
+                </li>
+                <li class="item">
+                    <Preview id="preview" name="spb" color="#1d29a3" amt="3">
+                        <div id="project">
+                            <h1>Scheduling Productivity Booster</h1>
+                            <p>
+                                A Next.js web application for syncronizing meetings across multiple teams at an organization.
+                            </p>
+                        </div>
+                    </Preview>
+                </li>
+                <li class="item">
+                    <Preview id="preview" name="pad" color="#1d29a3" amt="3">
+                        <div id="project">
+                            <h1>Photo A Day</h1>
+                            <p>
+                                A multi-platform mobile application made with Flutter for logging a picture of yourself once per day.
+                            </p>
+                        </div>
+                    </Preview>
+                </li>
+                <li class="item">
+                    <Preview id="preview" name="tx" color="#1d29a3" amt="3">
+                        <div id="project">
+                            <h1>TacticsX</h1>
+                            <p>
+                                A 2.5D tactical turn-based brawler created in Unity.
+                            </p>
+                        </div>
+                    </Preview>
+                </li>
+                <li class="item">
+                    <Preview id="preview" name="bell" color="#1d29a3" amt="3">
+                        <div id="project">
+                            <h1>Bell</h1>
+                            <p>
+                                An iOS application written in SwiftUI for tracking CTA L train cars in near real-time.
+                            </p>
+                        </div>
+                    </Preview>
+                </li>
+                <li class="item">
+                    <Preview id="preview" name="bblog" color="#1d29a3" amt="4">
+                        <div id="project">
+                            <h1>BBlog</h1>
+                            <p>
+                                A fullstack blog site built using the Leptos web framework in Rust.
+                            </p>
                         </div>
                     </Preview>
                 </li>
@@ -74,6 +124,7 @@ const Portfolio = () => (
             #project h1 {
                 padding: 15px;
                 opacity: 1;
+                font-size: 20px;
             }
 
             #project p {
@@ -90,14 +141,6 @@ const Portfolio = () => (
                 }
                 #intro p {
                     font-size: 12px;
-                }
-
-                
-                #project h1 {
-                    font-size: 30px;
-                }
-                #project p {
-                    font-size: 40px;
                 }
             }
         `}</style>

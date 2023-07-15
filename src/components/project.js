@@ -73,6 +73,9 @@ const Project = (props) => (
             #pics {
                 padding-top: 50px;
                 text-align: center;
+                width: 100%;
+                display: flex;
+                justify-content: center;
             }
 
             .container {
@@ -109,16 +112,22 @@ const Project = (props) => (
                 }
 
                 .button {
-                    padding: 1px 4px;
-                    transform: translate(0px, -6px);
+                    padding: 4px 4px;
+                    transform: translate(0px, -10px);
+                    text-align: center;
+                    width: 100%;
                 }
                 
                 #pic0 {
                     display: none;
                 }
                 #pic1 {
+                    display: flex;
+                    justify-content: center;
                     width: 100%;
-                    transform: translate(-2%, 0px);
+                    height: 100%;
+                    
+                    transform: translate(-1%, 0px);
                 }
                 #pic2 {
                     display: none;

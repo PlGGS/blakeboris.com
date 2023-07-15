@@ -10,9 +10,9 @@ const R2 = () => (
         pic2="https://user-images.githubusercontent.com/20197872/62155936-a48a1d00-b2cf-11e9-8fee-57c5c4db1d10.gif"
         writeup={
             <div>
-                <h2>The Little Robot that Could</h2>
+                <h2>The little robot that could</h2>
                 <p>
-                    For years before the summer of 2019, my old Hasbro R2D2 toy
+                    For years before the summer of 2018, my old Hasbro R2D2 toy
                     sat in shambles as I started planning a new life for it. I
                     sat on the idea for a long time with my little experience in
                     electronic hardware. As a kid, I had always imagined the
@@ -43,7 +43,7 @@ const R2 = () => (
                     what would've otherwise been a relatively easy task for a
                     Rasperry Pi running Raspian (now Raspberry Pi OS). To be
                     fair, ARM was somehow still rough territory for Microsoft,
-                    and that has barely changed as of 2021. Additionally, my
+                    and that has barely changed as of today. Additionally, my
                     experience with Linux was incredibly sparce at the time, so
                     learning Linux alongside Python on a Raspberry Pi didn't
                     sound nearly as appealing as sticking with Microsoft for the

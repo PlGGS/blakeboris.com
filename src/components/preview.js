@@ -42,8 +42,9 @@ const Preview = (props) => (
             <style jsx>{`
                 #project {
                     overflow: hidden;
-                    border-radius: 15px;
+                    border-radius: 12px;
                     border-style: solid;
+                    border-width: 2px;
                     margin: 1% 20% 1% 20%;
                     width: 57%;
                     height: 275px;
@@ -83,15 +84,6 @@ const Preview = (props) => (
                 #nameAndDesc:hover {
                 }
 
-                #project h1 {
-                    padding: 15px;
-                }
-
-                #project p {
-                    padding: 15px;
-                    margin: 140px auto 0 0;
-                }
-
                 @media (max-device-width: 1080px) {
                     #intro {
                         margin: 10%;
@@ -104,23 +96,12 @@ const Preview = (props) => (
                     }
 
                     #project {
-                        padding: 0px;
-                    }
-                    #project h1 {
-                        font-size: 30px;
-                    }
-                    #project p {
-                        font-size: 40px;
-                    }
-                }
-
-                @media (max-device-width: 1080px) {
-                    #project {
-                        height: 110px;
+                        height: 88px;
                         width: 90%;
+                        content-align: center;
                         margin: auto;
                     }
-
+                    
                     #nameAndDesc {
                         font-size: 10px;
                     }
@@ -139,12 +120,6 @@ const Preview = (props) => (
                         padding: 0px;
                         margin: 0 0 0 0;
                         height: 100px;
-                    }
-                    #project h1 {
-                        font-size: 30px;
-                    }
-                    #project p {
-                        font-size: 20px;
                     }
                 }
             `}</style>
@@ -173,11 +148,11 @@ function Link({ children, name, under }) {
 }
 
 function ResizeImages({ name, amt }) {
-    var imgs = `<table>`;
+    var imgs = `<div style="display: flex;">`;
     for (var o = 0; o < amt; o++) {
-        imgs += `<td><img src='/${name}/${name}${o}.jpg' style="height: 275px;"/></td>`;
+        imgs += `<img src='/${name}/${name}${o}.jpg' style="flex: 1 0 auto; object-fit: cover; max-width: 52%;"/>`;
     }
-    imgs += "</table>";
+    imgs += "</div>";
 
     return <div dangerouslySetInnerHTML={{ __html: imgs }} />;
 }
