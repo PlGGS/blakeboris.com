@@ -64,25 +64,4 @@ const Shortcut = (props) => (
     </Link>
 );
 
-function Link({ children, href, under }) {
-    const router = useRouter();
-    const style = {
-        marginRight: 10,
-        'textDecoration': under ? router.pathname === href ? 'underline' : 'none' : 'none',
-        'fontSize': '24px',
-        color: '#333'
-    }
-
-    const handleClick = (e) => {
-        e.preventDefault()
-        router.push(href)
-    }
-
-    return (
-        <a href={href} onClick={handleClick} style={style}>
-            {children}
-        </a>
-    )
-}
-
 export default Shortcut;

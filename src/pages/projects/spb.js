@@ -5,7 +5,7 @@ const SPB = () => (
     <Project
         name="Scheduling Productivity Booster"
         url="https://github.com/PlGGS/scheduling-productivity-booster"
-        desc="A Next.js web application for syncronizing meetings across multiple teams at an organization."
+        desc="A Next.js web application for synchronizing meetings across multiple teams at an organization."
         pic0='/spb/spb0.jpg'
         pic1='/spb/spb1.jpg'
         pic2='/spb/spb2.jpg'

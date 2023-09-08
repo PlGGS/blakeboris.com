@@ -11,7 +11,7 @@ const Portfolio = () => (
                 </p>
             </div>
             <ul id="grid">
-                <li class="item">
+                <li className="item">
                     <Preview name="r2" color="#2599f7" amt="6">
                         <div id="item">
                             <div id="project">
@@ -25,17 +25,17 @@ const Portfolio = () => (
                         </div>
                     </Preview>
                 </li>
-                <li class="item">
+                <li className="item">
                     <Preview id="preview" name="spb" color="#1d29a3" amt="3">
                         <div id="project">
                             <h1>Scheduling Productivity Booster</h1>
                             <p>
-                                A Next.js web application for syncronizing meetings across multiple teams at an organization.
+                                A Next.js web application for synchronizing meetings across multiple teams at an organization.
                             </p>
                         </div>
                     </Preview>
                 </li>
-                <li class="item">
+                <li className="item">
                     <Preview id="preview" name="pad" color="#1d29a3" amt="3">
                         <div id="project">
                             <h1>Photo A Day</h1>
@@ -45,7 +45,7 @@ const Portfolio = () => (
                         </div>
                     </Preview>
                 </li>
-                <li class="item">
+                <li className="item">
                     <Preview id="preview" name="tx" color="#1d29a3" amt="3">
                         <div id="project">
                             <h1>TacticsX</h1>
@@ -55,7 +55,7 @@ const Portfolio = () => (
                         </div>
                     </Preview>
                 </li>
-                <li class="item">
+                <li className="item">
                     <Preview id="preview" name="bell" color="#1d29a3" amt="3">
                         <div id="project">
                             <h1>Bell</h1>
@@ -65,7 +65,7 @@ const Portfolio = () => (
                         </div>
                     </Preview>
                 </li>
-                <li class="item">
+                <li className="item">
                     <Preview id="preview" name="bblog" color="#1d29a3" amt="4">
                         <div id="project">
                             <h1>BBlog</h1>
@@ -75,7 +75,7 @@ const Portfolio = () => (
                         </div>
                     </Preview>
                 </li>
-                <li class="item">
+                <li className="item">
                     <Preview id="preview" name="emi" color="#4f27e3" amt="4">
                         <div id="project">
                             <h1>Eldewrito Multi Instance</h1>
@@ -86,7 +86,7 @@ const Portfolio = () => (
                         </div>
                     </Preview>
                 </li>
-                <li class="item">
+                <li className="item">
                     <Preview id="preview" name="docs" color="#1d29a3" amt="4">
                         <div id="project">
                             <h1>V9 Documentation</h1>

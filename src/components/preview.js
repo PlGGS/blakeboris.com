@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useRouter } from "next/router";
+import Link from "./link";
 
 const Preview = (props) => (
     <>
@@ -126,26 +126,6 @@ const Preview = (props) => (
         </div>
     </>
 );
-
-function Link({ children, name, under }) {
-    const router = useRouter();
-    const href = "/projects/" + name;
-    const style = {
-        textDecoration: "none",
-        color: "#333",
-    };
-
-    const handleClick = (e) => {
-        e.preventDefault();
-        router.push(href);
-    };
-
-    return (
-        <a href={href} onClick={handleClick} style={style}>
-            {children}
-        </a>
-    );
-}
 
 function ResizeImages({ name, amt }) {
     var imgs = `<div style="display: flex;">`;

@@ -64,7 +64,7 @@ const Menu = () => (
     </Layout>
 );
 
-function Link({ children, href, under }) {
+function Link({ children, href }) {
     const router = useRouter();
     const style = {
         'fontSize': '42px',
@@ -72,11 +72,6 @@ function Link({ children, href, under }) {
     }
 
     const choose = (e) => {
-        e.preventDefault()
-        router.push(href)
-    }
-
-    const goBack = (e) => {
         e.preventDefault()
         router.push(href)
     }
