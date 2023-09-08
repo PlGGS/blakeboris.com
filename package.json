@@ -28,12 +28,22 @@
     "font-awesome": "^4.7.0",
     "framer-motion": "^2.3.0",
     "fs": "^0.0.1-security",
+    "gray-matter": "^4.0.3",
     "next": "^12.3.4",
     "next-fonts": "^1.1.0",
+    "next-mdx": "^0.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^3.10.0",
     "react-native-web": "^0.17.7",
-    "react-pdf": "^6.2.2"
+    "react-pdf": "^6.2.2",
+    "rehype": "^13.0.1",
+    "rehype-highlight": "^7.0.0",
+    "remark-gfm": "^3.0.1",
+    "remark-html": "^15.0.2",
+    "remark-mdx": "^2.3.0",
+    "remark-parse": "^10.0.2",
+    "remark-rehype": "^10.1.0",
+    "uuid": "^9.0.0"
   }
 }
