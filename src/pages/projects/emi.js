@@ -11,7 +11,7 @@ const EMI = () => (
         pic2='/emi/emi2.jpg'
         writeup={
             <div>
-                <h2>Coming Soon</h2>
+                <h3>Coming Soon</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac tempor mauris, at rhoncus enim. Vestibulum quam ex, placerat non consequat non, faucibus ut neque. Duis pretium mauris elit, quis congue risus rhoncus vitae. Maecenas gravida sagittis enim id dapibus. Fusce a dui dui. Duis cursus dignissim ipsum nec aliquam. Fusce pellentesque, erat non ornare accumsan, libero nunc aliquet dolor, in euismod nisi arcu ut velit. Duis felis nisi, dictum vitae massa fringilla, imperdiet sollicitudin enim. Sed nec orci mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vitae dolor purus. Curabitur auctor sapien quis ex consectetur, a iaculis justo sodales.</p>
                 <p>Etiam vel risus ac elit aliquet feugiat. Vivamus elementum turpis vel mi varius, quis condimentum mauris faucibus. Curabitur sodales tellus eget faucibus aliquet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec viverra volutpat purus non iaculis. Suspendisse eget velit elit. Morbi blandit diam at lacus condimentum, eu egestas ligula ullamcorper.</p>
                 

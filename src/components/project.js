@@ -84,7 +84,7 @@ const Project = (props) => (
             .container div {
                 margin: auto auto 100px auto;
             }
-            .container div h2 {
+            .container div h3 {
                 text-decoration: underline;
                 padding-top: 10px;
                 padding-bottom: 15px;
