@@ -10,7 +10,7 @@ const R2 = () => (
         pic2="https://user-images.githubusercontent.com/20197872/62155936-a48a1d00-b2cf-11e9-8fee-57c5c4db1d10.gif"
         writeup={
             <div>
-                <h2>The little robot that could</h2>
+                <h3>The Little Robot That Could</h3>
                 <p>
                     For years before the summer of 2018, my old Hasbro R2D2 toy
                     sat in shambles as I started planning a new life for it. I
