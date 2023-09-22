@@ -1,4 +1,3 @@
-import Layout from '../../components/layout';
 import Project from '../../components/project';
 
 const SPB = () => (
