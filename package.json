@@ -29,7 +29,7 @@
     "framer-motion": "^2.3.0",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
-    "next": "^12.3.4",
+    "next": "^13.5.4",
     "next-fonts": "^1.1.0",
     "next-mdx": "^0.1.0",
     "react": "^17.0.2",
