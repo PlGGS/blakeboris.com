@@ -8,9 +8,7 @@ const Layout = (props) => (
             <link rel="favicon" href="/favicon.ico" />
         </Head>
         <Navbar />
-        <body>
-            <div id="front">{props.children}</div>
-        </body>
+        <div id="front">{props.children}</div>
     </>
 );
 
