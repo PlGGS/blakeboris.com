@@ -66,7 +66,7 @@ const Portfolio = () => (
                     </Preview>
                 </li>
                 <li className="item">
-                    <Preview id="preview" name="bblog" color="#1d29a3" amt="4">
+                    <Preview id="preview" name="bblog" color="#1d29a3" amt="3">
                         <div id="project">
                             <h1>BBlog</h1>
                             <p>
