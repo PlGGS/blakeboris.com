@@ -125,7 +125,7 @@ const Navbar = (props) => (
                             </td>
                             <td>
                                 <motion.div whileHover={{ scale: 1.1 }}>
-                                    <a href="https://www.instagram.com/blakeboris_/">
+                                    <a href="https://www.instagram.com/blakebor.is/">
                                         <i id="icon">
                                             <FontAwesomeIcon
                                                 icon={faInstagram}
