@@ -1,38 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
+import dynamic from 'next/dynamic';
 import Layout from '../components/layout';
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-
-function PdfViewer({ scale, numPages, setNumPages }) {
-    function onDocumentLoadSuccess({ numPages }) {
-        setNumPages(numPages);
-    }
-
-    return (
-        <div id='container' style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-        }}>
-            <Document 
-                file="Resume.pdf" 
-                onLoadSuccess={onDocumentLoadSuccess} 
-            >
-                {[...Array(numPages).keys()].map((index) => (
-                    <div key={index} id='doc' style={{
-                        boxShadow: '0px 2px 6px rgba(0, 0, 0, 0.3)',
-                        marginTop: '2.5em'
-                    }}>
-                        <Page pageNumber={index + 1} renderTextLayer={false} scale={scale} />
-                    </div>
-                ))}
-            </Document>
-        </div>
-    );
-}
+// react-pdf needs browser APIs (e.g. DOMMatrix), so only render it client-side
+const PdfViewer = dynamic(() => import('../components/pdfViewer'), { ssr: false });
 
 const Resume = () => {
     const [scale, setScale] = useState(1.3);
